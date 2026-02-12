@@ -1,264 +1,256 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Desarrollo Full Stack</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Full Stack - Información</title>
 
-<style>
-:root{
-    --primario:#0ea5e9;
-    --secundario:#22c55e;
-    --oscuro:#0f172a;
-    --claro:#f1f5f9;
-}
+    <style>
+        :root {
+            --primario: #0ea5e9;
+            --secundario: #22c55e;
+            --oscuro: #0f172a;
+            --claro: #f1f5f9;
+        }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body{
-    font-family:"Segoe UI",sans-serif;
-    background:var(--claro);
-    color:#1e293b;
-}
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: var(--claro);
+            color: #1e293b;
+        }
 
-/* NAVBAR */
-header{
-    background:var(--oscuro);
-    padding:12px 30px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-.logo img{height:55px;}
-.logo h1{color:white;font-size:20px;}
+        /* NAVBAR */
+        header {
+            background: var(--oscuro);
+            padding: 12px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo img { height: 55px; }
+        .logo h1 { color: white; font-size: 20px; }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    transition:.3s;
-}
-nav a:hover{color:var(--primario);}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: .3s;
+        }
+        nav a:hover { color: var(--primario); }
 
-/* HERO */
-.hero{
-    height:85vh;
-    background:linear-gradient(120deg,#0ea5e9,#22c55e);
-    color:white;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
-.hero img{
-    width:170px;
-    margin-bottom:20px;
-}
-.hero h2{
-    font-size:46px;
-    margin-bottom:10px;
-}
-.hero p{
-    font-size:20px;
-    max-width:700px;
-}
+        /* HERO */
+        .hero {
+            height: 85vh;
+            background: linear-gradient(120deg, #0ea5e9, #22c55e);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .hero img {
+            width: 170px;
+            margin-bottom: 20px;
+        }
+        .hero h2 {
+            font-size: 46px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+        }
 
-/* BOTÓN PRINCIPAL (AHORA MUY VISIBLE) */
-.btn-info{
-    display:inline-block;
-    margin-top:30px;
-    background:#0f172a;
-    color:white;
-    padding:16px 34px;
-    font-size:20px;
-    font-weight:bold;
-    border-radius:10px;
-    text-decoration:none;
-    box-shadow:0 6px 20px rgba(0,0,0,.3);
-    transition:.3s;
-}
-.btn-info:hover{
-    background:white;
-    color:#0f172a;
-    transform:scale(1.05);
-}
+        /* BOTÓN PRINCIPAL */
+        .btn-info {
+            display: inline-block;
+            margin-top: 30px;
+            background: #0f172a;
+            color: white;
+            padding: 16px 34px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(0,0,0,.3);
+            transition: .3s;
+        }
+        .btn-info:hover {
+            background: white;
+            color: #0f172a;
+            transform: scale(1.05);
+        }
 
-/* BOTÓN FLOTANTE EXTRA (SIEMPRE VISIBLE) */
-.btn-fixed{
-    position:fixed;
-    bottom:25px;
-    right:25px;
-    background:#22c55e;
-    color:white;
-    padding:14px 22px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 6px 18px rgba(0,0,0,.25);
-    transition:.3s;
-}
-.btn-fixed:hover{
-    background:#16a34a;
-    transform:translateY(-3px);
-}
+        /* BOTÓN FLOTANTE */
+        .btn-fixed {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #0ea5e9; /* Cambiado a azul para diferenciarlo */
+            color: white;
+            padding: 14px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 6px 18px rgba(0,0,0,.25);
+            transition: .3s;
+            z-index: 2000;
+        }
+        .btn-fixed:hover {
+            background: #0284c7;
+            transform: translateY(-3px);
+        }
 
-/* SECCIONES */
-section{padding:60px 10%;}
-.section-title{
-    font-size:32px;
-    margin-bottom:25px;
-    border-left:6px solid var(--primario);
-    padding-left:12px;
-}
+        /* SECCIONES */
+        section { padding: 60px 10%; }
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 25px;
+            border-left: 6px solid var(--primario);
+            padding-left: 12px;
+        }
 
-/* TARJETAS */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-}
-.card{
-    background:white;
-    padding:25px;
-    border-radius:14px;
-    box-shadow:0 8px 22px rgba(0,0,0,.1);
-    transition:.3s;
-}
-.card:hover{transform:translateY(-6px);}
-.card h3{color:var(--primario);margin-bottom:10px;}
+        /* TARJETAS */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 8px 22px rgba(0,0,0,.1);
+            transition: .3s;
+        }
+        .card:hover { transform: translateY(-6px); }
+        .card h3 { color: var(--primario); margin-bottom: 10px; }
 
-/* TEMARIO */
-.tema{
-    background:white;
-    padding:25px;
-    margin-bottom:20px;
-    border-radius:12px;
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
-}
-.tema h3{color:var(--secundario);}
+        /* TEMARIO */
+        .tema {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,.08);
+        }
+        .tema h3 { color: var(--secundario); }
 
-/* FOOTER */
-footer{
-    background:var(--oscuro);
-    color:white;
-    text-align:center;
-    padding:25px;
-    margin-top:40px;
-}
-</style>
+        /* FOOTER */
+        footer {
+            background: var(--oscuro);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-<nav>
-<div class="logo">
-<img src="logo.jpg" alt="Logo">
-<h1>Ingeniería Informática</h1>
-</div>
+    <nav>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+            <h1>Ingeniería Informática</h1>
+        </div>
 
-<div>
-<a href="#descripcion">Descripción</a>
-<a href="#competencias">Competencias</a>
-<a href="#temario">Temario</a>
-<a href="#proyecto">Proyecto</a>
-</div>
-</nav>
+        <div>
+            <a href="index.html">Inicio</a>
+            <a href="#descripcion">Descripción</a>
+            <a href="#competencias">Competencias</a>
+            <a href="#temario">Temario</a>
+            <a href="#proyecto">Proyecto</a>
+        </div>
+    </nav>
 </header>
 
 <div class="hero">
-<img src="logo.jpg" alt="Logo">
-<h2>Asignatura: Desarrollo Full Stack</h2>
-<p>Diseño, desarrollo e implementación de aplicaciones web modernas, accesibles y escalables.</p>
+    <img src="logo.jpg" alt="Logo">
+    <h2>Asignatura: Desarrollo Full Stack</h2>
+    <p>Diseño, desarrollo e implementación de aplicaciones web modernas, accesibles y escalables.</p>
 
-<!-- BOTÓN HACIA Info_Materia.html -->
-<a href="Info_Materia.html" class="btn-info">Ir a Información de la Materia</a>
+    <a href="index.html" class="btn-info">Volver a la Página Principal</a>
 </div>
 
 <section id="descripcion">
-<h2 class="section-title">Descripción</h2>
-<p>
-La asignatura de Desarrollo Full Stack forma al estudiante en la creación de aplicaciones web completas,
-integrando tecnologías de Front-End, Back-End, control de versiones y despliegue continuo.
-</p>
+    <h2 class="section-title">Descripción</h2>
+    <p>
+        La asignatura de Desarrollo Full Stack forma al estudiante en la creación de aplicaciones web completas,
+        integrando tecnologías de Front-End, Back-End, control de versiones y despliegue continuo.
+    </p>
 </section>
 
 <section id="competencias">
-<h2 class="section-title">Competencias</h2>
-<div class="grid">
-<div class="card">
-<h3>Front-End</h3>
-<p>HTML5, CSS3, diseño responsivo y accesibilidad.</p>
-</div>
-
-<div class="card">
-<h3>Back-End</h3>
-<p>Arquitecturas escalables y patrones de diseño.</p>
-</div>
-
-<div class="card">
-<h3>Herramientas</h3>
-<p>Git, Node.js, Visual Studio Code.</p>
-</div>
-
-<div class="card">
-<h3>Frameworks</h3>
-<p>Angular, APIs REST y Firebase.</p>
-</div>
-</div>
+    <h2 class="section-title">Competencias</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Front-End</h3>
+            <p>HTML5, CSS3, diseño responsivo y accesibilidad.</p>
+        </div>
+        <div class="card">
+            <h3>Back-End</h3>
+            <p>Arquitecturas escalables y patrones de diseño.</p>
+        </div>
+        <div class="card">
+            <h3>Herramientas</h3>
+            <p>Git, Node.js, Visual Studio Code.</p>
+        </div>
+        <div class="card">
+            <h3>Frameworks</h3>
+            <p>Angular, APIs REST y Firebase.</p>
+        </div>
+    </div>
 </section>
 
 <section id="temario">
-<h2 class="section-title">Temario</h2>
-
-<div class="tema">
-<h3>1. Fundamentos del Desarrollo Full Stack</h3>
-<p>Arquitectura cliente-servidor, roles del desarrollador y herramientas modernas.</p>
-</div>
-
-<div class="tema">
-<h3>2. Interfaces Web Modernas</h3>
-<p>HTML5 semántico, CSS3, Bootstrap/Tailwind y diseño responsive.</p>
-</div>
-
-<div class="tema">
-<h3>3. Patrones de Diseño</h3>
-<p>Singleton, Factory Method, Adapter, Decorator, Observer y State.</p>
-</div>
-
-<div class="tema">
-<h3>4. Desarrollo con Frameworks</h3>
-<p>Angular, consumo de APIs REST, formularios reactivos y Firebase.</p>
-</div>
-
+    <h2 class="section-title">Temario</h2>
+    <div class="tema">
+        <h3>1. Fundamentos del Desarrollo Full Stack</h3>
+        <p>Arquitectura cliente-servidor, roles del desarrollador y herramientas modernas.</p>
+    </div>
+    <div class="tema">
+        <h3>2. Interfaces Web Modernas</h3>
+        <p>HTML5 semántico, CSS3, Bootstrap/Tailwind y diseño responsive.</p>
+    </div>
+    <div class="tema">
+        <h3>3. Patrones de Diseño</h3>
+        <p>Singleton, Factory Method, Adapter, Decorator, Observer y State.</p>
+    </div>
+    <div class="tema">
+        <h3>4. Desarrollo con Frameworks</h3>
+        <p>Angular, consumo de APIs REST, formularios reactivos y Firebase.</p>
+    </div>
 </section>
 
 <section id="proyecto">
-<h2 class="section-title">Proyecto</h2>
-<p>
-Desarrollo de un sistema Full Stack aplicando análisis, planeación, ejecución y evaluación
-para resolver un problema real mediante tecnologías web modernas.
-</p>
+    <h2 class="section-title">Proyecto</h2>
+    <p>
+        Desarrollo de un sistema Full Stack aplicando análisis, planeación, ejecución y evaluación 
+        para resolver un problema real mediante tecnologías web modernas.
+    </p>
 </section>
 
 <footer>
-<p>Tecnológico Nacional de México | Ingeniería Informática</p>
+    <p>Tecnológico Nacional de México | Ingeniería Informática</p>
 </footer>
 
-<!-- BOTÓN FLOTANTE SIEMPRE VISIBLE -->
-<a href="Info_Materia.html" class="btn-fixed">Ver Materia</a>
+<a href="index.html" class="btn-fixed">Volver al Inicio</a>
 
 </body>
 </html>
