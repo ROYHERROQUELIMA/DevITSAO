@@ -39,13 +39,9 @@ nav{
     align-items:center;
     gap:12px;
 }
-.logo img{
-    height:55px;
-}
-.logo h1{
-    color:white;
-    font-size:20px;
-}
+.logo img{height:55px;}
+.logo h1{color:white;font-size:20px;}
+
 nav a{
     color:white;
     text-decoration:none;
@@ -79,27 +75,47 @@ nav a:hover{color:var(--primario);}
     max-width:700px;
 }
 
-/* BOTÓN */
+/* BOTÓN PRINCIPAL (AHORA MUY VISIBLE) */
 .btn-info{
-    margin-top:25px;
-    background:white;
-    color:#0f172a;
-    padding:14px 28px;
+    display:inline-block;
+    margin-top:30px;
+    background:#0f172a;
+    color:white;
+    padding:16px 34px;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:10px;
     text-decoration:none;
-    border-radius:8px;
-    font-size:18px;
-    font-weight:600;
+    box-shadow:0 6px 20px rgba(0,0,0,.3);
     transition:.3s;
 }
 .btn-info:hover{
-    background:#0f172a;
+    background:white;
+    color:#0f172a;
+    transform:scale(1.05);
+}
+
+/* BOTÓN FLOTANTE EXTRA (SIEMPRE VISIBLE) */
+.btn-fixed{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:#22c55e;
     color:white;
+    padding:14px 22px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
+    transition:.3s;
+}
+.btn-fixed:hover{
+    background:#16a34a;
+    transform:translateY(-3px);
 }
 
 /* SECCIONES */
-section{
-    padding:60px 10%;
-}
+section{padding:60px 10%;}
 .section-title{
     font-size:32px;
     margin-bottom:25px;
@@ -120,13 +136,8 @@ section{
     box-shadow:0 8px 22px rgba(0,0,0,.1);
     transition:.3s;
 }
-.card:hover{
-    transform:translateY(-6px);
-}
-.card h3{
-    color:var(--primario);
-    margin-bottom:10px;
-}
+.card:hover{transform:translateY(-6px);}
+.card h3{color:var(--primario);margin-bottom:10px;}
 
 /* TEMARIO */
 .tema{
@@ -136,9 +147,7 @@ section{
     border-radius:12px;
     box-shadow:0 5px 18px rgba(0,0,0,.08);
 }
-.tema h3{
-    color:var(--secundario);
-}
+.tema h3{color:var(--secundario);}
 
 /* FOOTER */
 footer{
@@ -174,8 +183,8 @@ footer{
 <h2>Asignatura: Desarrollo Full Stack</h2>
 <p>Diseño, desarrollo e implementación de aplicaciones web modernas, accesibles y escalables.</p>
 
-<!-- BOTÓN NUEVO -->
-<a href="Info_Materia.html" class="btn-info">📘 Ver Información de la Materia</a>
+<!-- BOTÓN HACIA Info_Materia.html -->
+<a href="Info_Materia.html" class="btn-info">Ir a Información de la Materia</a>
 </div>
 
 <section id="descripcion">
@@ -247,6 +256,9 @@ para resolver un problema real mediante tecnologías web modernas.
 <footer>
 <p>Tecnológico Nacional de México | Ingeniería Informática</p>
 </footer>
+
+<!-- BOTÓN FLOTANTE SIEMPRE VISIBLE -->
+<a href="Info_Materia.html" class="btn-fixed">Ver Materia</a>
 
 </body>
 </html>
