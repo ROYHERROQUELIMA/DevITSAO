@@ -16,7 +16,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-    font-family: "Segoe UI", sans-serif;
+    font-family:"Segoe UI",sans-serif;
     background:var(--claro);
     color:#1e293b;
 }
@@ -24,7 +24,7 @@ body{
 /* NAVBAR */
 header{
     background:var(--oscuro);
-    padding:15px 30px;
+    padding:12px 30px;
     position:sticky;
     top:0;
     z-index:1000;
@@ -34,19 +34,29 @@ nav{
     justify-content:space-between;
     align-items:center;
 }
-nav h1{ color:white; }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.logo img{
+    height:55px;
+}
+.logo h1{
+    color:white;
+    font-size:20px;
+}
 nav a{
     color:white;
     text-decoration:none;
     margin-left:20px;
-    font-weight:500;
     transition:.3s;
 }
-nav a:hover{ color:var(--primario); }
+nav a:hover{color:var(--primario);}
 
 /* HERO */
 .hero{
-    height:80vh;
+    height:85vh;
     background:linear-gradient(120deg,#0ea5e9,#22c55e);
     color:white;
     display:flex;
@@ -56,18 +66,28 @@ nav a:hover{ color:var(--primario); }
     text-align:center;
     padding:20px;
 }
-.hero h2{ font-size:48px; margin-bottom:20px; }
-.hero p{ font-size:22px; max-width:700px; }
+.hero img{
+    width:170px;
+    margin-bottom:20px;
+}
+.hero h2{
+    font-size:46px;
+    margin-bottom:10px;
+}
+.hero p{
+    font-size:20px;
+    max-width:700px;
+}
 
 /* SECCIONES */
-section{ padding:60px 10%; }
-
+section{
+    padding:60px 10%;
+}
 .section-title{
-    font-size:34px;
-    color:var(--oscuro);
-    margin-bottom:30px;
+    font-size:32px;
+    margin-bottom:25px;
     border-left:6px solid var(--primario);
-    padding-left:15px;
+    padding-left:12px;
 }
 
 /* TARJETAS */
@@ -79,30 +99,28 @@ section{ padding:60px 10%; }
 .card{
     background:white;
     padding:25px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    border-radius:14px;
+    box-shadow:0 8px 22px rgba(0,0,0,.1);
     transition:.3s;
 }
 .card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    transform:translateY(-6px);
 }
 .card h3{
     color:var(--primario);
     margin-bottom:10px;
 }
 
-/* BLOQUES TEMARIO */
+/* TEMARIO */
 .tema{
     background:white;
-    margin-bottom:20px;
     padding:25px;
+    margin-bottom:20px;
     border-radius:12px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
 }
 .tema h3{
     color:var(--secundario);
-    margin-bottom:10px;
 }
 
 /* FOOTER */
@@ -113,11 +131,6 @@ footer{
     padding:25px;
     margin-top:40px;
 }
-
-/* RESPONSIVE */
-@media(max-width:768px){
-    .hero h2{font-size:32px;}
-}
 </style>
 </head>
 
@@ -125,7 +138,11 @@ footer{
 
 <header>
 <nav>
-<h1>Full Stack</h1>
+<div class="logo">
+<img src="logo.jpg" alt="Logo">
+<h1>Ingeniería Informática</h1>
+</div>
+
 <div>
 <a href="#descripcion">Descripción</a>
 <a href="#competencias">Competencias</a>
@@ -136,22 +153,21 @@ footer{
 </header>
 
 <div class="hero">
+<img src="logo.jpg" alt="Logo">
 <h2>Asignatura: Desarrollo Full Stack</h2>
-<p>Formación integral para diseñar, desarrollar y desplegar aplicaciones web modernas, accesibles y escalables.</p>
+<p>Diseño, desarrollo e implementación de aplicaciones web modernas, accesibles y escalables.</p>
 </div>
 
 <section id="descripcion">
 <h2 class="section-title">Descripción</h2>
 <p>
-La asignatura capacita al estudiante en el desarrollo completo de aplicaciones web,
-desde la interfaz de usuario hasta la lógica del servidor, utilizando tecnologías modernas,
-servicios en la nube y buenas prácticas profesionales.
+La asignatura de Desarrollo Full Stack forma al estudiante en la creación de aplicaciones web completas,
+integrando tecnologías de Front-End, Back-End, control de versiones y despliegue continuo.
 </p>
 </section>
 
 <section id="competencias">
 <h2 class="section-title">Competencias</h2>
-
 <div class="grid">
 <div class="card">
 <h3>Front-End</h3>
@@ -165,7 +181,7 @@ servicios en la nube y buenas prácticas profesionales.
 
 <div class="card">
 <h3>Herramientas</h3>
-<p>Git, Node.js, VS Code y control de versiones.</p>
+<p>Git, Node.js, Visual Studio Code.</p>
 </div>
 
 <div class="card">
@@ -180,7 +196,7 @@ servicios en la nube y buenas prácticas profesionales.
 
 <div class="tema">
 <h3>1. Fundamentos del Desarrollo Full Stack</h3>
-<p>Arquitectura cliente-servidor, roles del desarrollador y herramientas profesionales.</p>
+<p>Arquitectura cliente-servidor, roles del desarrollador y herramientas modernas.</p>
 </div>
 
 <div class="tema">
@@ -190,45 +206,26 @@ servicios en la nube y buenas prácticas profesionales.
 
 <div class="tema">
 <h3>3. Patrones de Diseño</h3>
-<p>Singleton, Factory, Adapter, Decorator, Observer y State.</p>
+<p>Singleton, Factory Method, Adapter, Decorator, Observer y State.</p>
 </div>
 
 <div class="tema">
 <h3>4. Desarrollo con Frameworks</h3>
-<p>Angular, consumo de APIs REST, formularios y Firebase.</p>
+<p>Angular, consumo de APIs REST, formularios reactivos y Firebase.</p>
 </div>
 
 </section>
 
 <section id="proyecto">
-<h2 class="section-title">Proyecto de la Asignatura</h2>
-
-<div class="grid">
-<div class="card">
-<h3>Fundamentación</h3>
-<p>Análisis del problema.</p>
-</div>
-
-<div class="card">
-<h3>Planeación</h3>
-<p>Diseño de la solución.</p>
-</div>
-
-<div class="card">
-<h3>Ejecución</h3>
-<p>Desarrollo del sistema.</p>
-</div>
-
-<div class="card">
-<h3>Evaluación</h3>
-<p>Mejora continua.</p>
-</div>
-</div>
-
+<h2 class="section-title">Proyecto</h2>
+<p>
+Desarrollo de un sistema Full Stack aplicando análisis, planeación, ejecución y evaluación
+para resolver un problema real mediante tecnologías web modernas.
+</p>
 </section>
 
 <footer>
-<p>Ingeniería Informática | Desarrollo Full Stack</p>
+<p>Tecnológico Nacional de México | Ingeniería Informática</p>
 </footer>
 
 </body>
