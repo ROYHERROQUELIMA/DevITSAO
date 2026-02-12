@@ -1,1 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desarrollo Full Stack</title>
 
+<style>
+:root{
+    --primario:#0ea5e9;
+    --secundario:#22c55e;
+    --oscuro:#0f172a;
+    --claro:#f1f5f9;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family: "Segoe UI", sans-serif;
+    background:var(--claro);
+    color:#1e293b;
+}
+
+/* NAVBAR */
+header{
+    background:var(--oscuro);
+    padding:15px 30px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+nav h1{ color:white; }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:500;
+    transition:.3s;
+}
+nav a:hover{ color:var(--primario); }
+
+/* HERO */
+.hero{
+    height:80vh;
+    background:linear-gradient(120deg,#0ea5e9,#22c55e);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+.hero h2{ font-size:48px; margin-bottom:20px; }
+.hero p{ font-size:22px; max-width:700px; }
+
+/* SECCIONES */
+section{ padding:60px 10%; }
+
+.section-title{
+    font-size:34px;
+    color:var(--oscuro);
+    margin-bottom:30px;
+    border-left:6px solid var(--primario);
+    padding-left:15px;
+}
+
+/* TARJETAS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:.3s;
+}
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+.card h3{
+    color:var(--primario);
+    margin-bottom:10px;
+}
+
+/* BLOQUES TEMARIO */
+.tema{
+    background:white;
+    margin-bottom:20px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+.tema h3{
+    color:var(--secundario);
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+    background:var(--oscuro);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero h2{font-size:32px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<h1>Full Stack</h1>
+<div>
+<a href="#descripcion">Descripción</a>
+<a href="#competencias">Competencias</a>
+<a href="#temario">Temario</a>
+<a href="#proyecto">Proyecto</a>
+</div>
+</nav>
+</header>
+
+<div class="hero">
+<h2>Asignatura: Desarrollo Full Stack</h2>
+<p>Formación integral para diseñar, desarrollar y desplegar aplicaciones web modernas, accesibles y escalables.</p>
+</div>
+
+<section id="descripcion">
+<h2 class="section-title">Descripción</h2>
+<p>
+La asignatura capacita al estudiante en el desarrollo completo de aplicaciones web,
+desde la interfaz de usuario hasta la lógica del servidor, utilizando tecnologías modernas,
+servicios en la nube y buenas prácticas profesionales.
+</p>
+</section>
+
+<section id="competencias">
+<h2 class="section-title">Competencias</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Front-End</h3>
+<p>HTML5, CSS3, diseño responsivo y accesibilidad.</p>
+</div>
+
+<div class="card">
+<h3>Back-End</h3>
+<p>Arquitecturas escalables y patrones de diseño.</p>
+</div>
+
+<div class="card">
+<h3>Herramientas</h3>
+<p>Git, Node.js, VS Code y control de versiones.</p>
+</div>
+
+<div class="card">
+<h3>Frameworks</h3>
+<p>Angular, APIs REST y Firebase.</p>
+</div>
+</div>
+</section>
+
+<section id="temario">
+<h2 class="section-title">Temario</h2>
+
+<div class="tema">
+<h3>1. Fundamentos del Desarrollo Full Stack</h3>
+<p>Arquitectura cliente-servidor, roles del desarrollador y herramientas profesionales.</p>
+</div>
+
+<div class="tema">
+<h3>2. Interfaces Web Modernas</h3>
+<p>HTML5 semántico, CSS3, Bootstrap/Tailwind y diseño responsive.</p>
+</div>
+
+<div class="tema">
+<h3>3. Patrones de Diseño</h3>
+<p>Singleton, Factory, Adapter, Decorator, Observer y State.</p>
+</div>
+
+<div class="tema">
+<h3>4. Desarrollo con Frameworks</h3>
+<p>Angular, consumo de APIs REST, formularios y Firebase.</p>
+</div>
+
+</section>
+
+<section id="proyecto">
+<h2 class="section-title">Proyecto de la Asignatura</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Fundamentación</h3>
+<p>Análisis del problema.</p>
+</div>
+
+<div class="card">
+<h3>Planeación</h3>
+<p>Diseño de la solución.</p>
+</div>
+
+<div class="card">
+<h3>Ejecución</h3>
+<p>Desarrollo del sistema.</p>
+</div>
+
+<div class="card">
+<h3>Evaluación</h3>
+<p>Mejora continua.</p>
+</div>
+</div>
+
+</section>
+
+<footer>
+<p>Ingeniería Informática | Desarrollo Full Stack</p>
+</footer>
+
+</body>
+</html>
